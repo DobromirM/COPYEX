@@ -1,0 +1,15 @@
+num a = 55;
+function void scope()
+{
+    num a = 6;
+    print(a);
+}
+
+scope();
+print(a);
+
+#
+Expected Output of python program:
+6
+55
+#

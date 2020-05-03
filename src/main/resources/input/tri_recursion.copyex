@@ -1,0 +1,29 @@
+function num triRecursion(num k)
+{
+    if (k > 0)
+    {
+        num result;
+        result = triRecursion(k - 1);
+        result = result + k;
+        print(result);
+    }
+    else
+    {
+        num result = 0;
+    }
+    return result;
+}
+
+num final;
+final = triRecursion(6);
+
+
+#
+Expected Output of python program:
+1
+3
+6
+10
+15
+21
+#

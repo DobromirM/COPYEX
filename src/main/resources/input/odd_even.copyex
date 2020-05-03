@@ -1,0 +1,30 @@
+num n = 100;
+num odd = 0;
+num even = 0;
+num index = 1;
+
+while(index <= n)
+{
+    if ( index % 2 == 0)
+    {
+        even = even + index;
+    }
+    else
+    {
+        odd = odd + index;
+    }
+
+    index = index + 1;
+}
+
+print(odd);
+print(even);
+print(odd + even);
+
+
+#
+Expected Output of python program:
+2500
+2550
+5050
+#

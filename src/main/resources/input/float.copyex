@@ -1,0 +1,26 @@
+function num addHalf(num a)
+{
+	a = a + 0.5;
+	return a;
+}
+
+function num addThird(num a)
+{
+	a = a + 0.3;
+	return a;
+}
+
+function void display(num a)
+{
+	print(a);
+}
+
+num a = 13;
+a = addHalf(a);
+a = addThird(a);
+display(a);
+
+#
+Expected Output of python program:
+13.8
+#

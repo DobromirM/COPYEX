@@ -1,0 +1,21 @@
+function num power(num a, num b)
+{
+	num total = 1;
+	num counter = b;
+	while(counter > 0)
+	{
+		total = total * a;
+		counter -= 1;
+	}
+
+	return total;
+}
+
+num result;
+result = power(2, 10);
+print(result);
+
+#
+Expected Output of python program:
+1024
+#

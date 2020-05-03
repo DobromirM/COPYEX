@@ -1,0 +1,52 @@
+bool a = 5 + 4 > 6;
+
+if (a)
+{
+    print(a);
+}
+else
+{
+    print(-1);
+}
+
+num counter = 10;
+num innerCounter;
+innerCounter = 5;
+num total = 1;
+
+
+while(counter > 0)
+{
+	if(counter % 2 == 0)
+	{
+		total *= 5;
+	}
+	else
+	{
+		total = total * 3;
+	}
+
+	while(innerCounter > 0)
+	{
+		if(innerCounter % 3)
+		{
+			total = total + 1;
+		}
+		else
+		{
+			total -= 2;
+		}
+
+		innerCounter -= 1;
+	}
+
+	counter = counter -1;
+}
+
+print(total);
+
+#
+Expected Output of python program:
+True
+1063125
+#

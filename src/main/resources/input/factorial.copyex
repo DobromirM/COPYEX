@@ -1,0 +1,16 @@
+num n = 8;
+num val = 1;
+num counter = 1;
+
+while (counter <= n)
+{
+    val = val * counter;
+    counter = counter + 1;
+}
+
+print(val);
+
+#
+Expected Output of python program:
+403220
+#

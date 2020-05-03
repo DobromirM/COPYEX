@@ -1,0 +1,42 @@
+group "copyex"
+version '1.0-SNAPSHOT'
+
+apply plugin: 'java'
+apply plugin: 'antlr'
+apply plugin: 'idea'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+    antlr "org.antlr:antlr4:4.7.2"
+}
+
+generateGrammarSource {
+    arguments += ["-visitor", "-long-messages", "-package", "copyex"]
+    outputDirectory = file("build/generated-src/antlr/main/copyex")
+}
+
+jar {
+    manifest {
+        attributes(
+                    'Main-Class': 'Main'
+        )
+    }
+}
+
+buildscript {
+    repositories {
+        jcenter()
+    }
+    dependencies {
+        classpath 'com.github.jengelman.gradle.plugins:shadow:2.0.1'
+    }
+}
+
+apply plugin: 'java'
+apply plugin: 'com.github.johnrengelman.shadow'
